@@ -1,0 +1,82 @@
+// Variables
+$white: hsl(0, 0%, 100%);
+$light-gray: hsl(212, 45%, 89%);
+$grayish-blue: hsl(220, 15%, 55%);
+$dark-blue: hsl(218, 44%, 22%);
+$text-color: $dark-blue;
+$bg-color: $white;
+
+// Reset and Global Styles
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  color: $text-color;
+  background-color: $light-gray;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Main Content Styles
+#main-content {
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  width: 400px;
+  background-color: $white;
+  box-shadow: 5px 5px 60px 1px rgba(200, 200, 200, 0.8);
+  padding: 20px;
+  border-radius: 30px;
+
+  #qr-img img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+  }
+
+  #descriptive-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+
+    h1 {
+      margin: 20px 0;
+      text-align: justify;
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+
+    p {
+      text-align: center;
+      color: $dark-blue;
+      font-size: 1.15rem;
+    }
+  }
+}
+
+// Responsive Styles
+@media screen and (max-width: 375px) {
+  #main-content {
+    width: 320px;
+  }
+}
